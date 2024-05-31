@@ -1,0 +1,386 @@
+/*Fontes Google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color:#8d4c02;
+    --second-color:#e9bc82;
+}
+section{
+    padding: 50px 10%;
+}
+*::selection{/*quando seleciona alguma frase fica nesta cor estabelecida*/
+    color: #fff;
+    background-color: var(--main-color);
+}
+img{
+    width: 100%;
+}
+header{
+    background-color: rgb(131, 131, 131);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 7%;
+    transition: all .50s ease;
+}
+/*logo*/
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    border-radius: 10%;/*borda da img da logo*/
+    width: 40px;/*tamanho da logo*/
+}
+/*barra de navegação*/
+.navbar{
+    display: flex;
+}
+.navbar a{
+    display: inline-block;
+    margin: 0 35px;
+    
+    font-size: var(--p-font);
+    transition: all .6s ease;
+    padding-block: 16px;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+.navbar a:hover {
+    background: #fff;
+    color: var(--main-color);
+    transform: scale(1.2);
+}
+.right-content{
+    display: flex;
+    align-items: center;
+}
+/*icone para acessar o menu '='*/
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+    margin-left: 15px;
+}
+
+ /*Pagina inicial*/
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: -1;
+ }
+ /*botão Faça a diferença*/
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: 0 0 5px white;
+}
+.active{
+    background: rgb(116, 52, 15);
+    border-radius: 20px;
+ }
+a:hover{
+    color: var(--second-color);
+ }
+/*seção inicial*/
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--second-color);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);/*fundo preto com 50% de opacidade*/
+}
+section h1, h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 5px;
+}
+.section p{
+    line-height: 1.4;
+    margin: 15px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+/*heading (cabeçalho)*/
+.heading{
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: rgb(9, 68, 102);
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+/*seção sobre e como Ajudar*/
+.sobre,
+.comoAjudar{
+    background-color: rgb(243, 231, 216);
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+   
+}
+.sobre-img,
+.ajudar-img{
+    flex: 1 1 21rem;
+}
+.sobre-text,
+.ajudar-text{
+    flex: 1 1 21rem;
+    color: black;
+}
+.sobre-text h2,
+.ajudar-text h2{
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+.sobre-text p, 
+.ajudar-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+/*seção depoimentos, video da reportagem*/
+.depoimentos, 
+.itens{
+    background-color: rgb(243, 231, 216);
+}
+.depoimentos-video{
+    width: 470px;
+    height: 281px;
+}
+/*Seção Itens Necessários*/
+.itens li{
+    color: black;
+    margin-top: 0.5rem;
+    text-align: justify;
+    font-size: 1.5rem;
+    list-style-type: disc;
+}
+/*seção FAQ*/
+.FAQ{
+    background: rgb(243, 231, 216);
+    text-align: justify;
+    padding: 4em 2em;
+}
+.questoes{
+    color: black;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.questoes li{
+    background: #f2f2f2;
+    border-bottom: 1px #ccc solid;
+}
+.questoes li:first-child{
+    border-top: 1px #ccc solid;
+}
+.q{
+    padding: 1em 0;
+    border-left: 10px #f2f2f2 solid;
+    cursor: pointer;
+}
+.q:hover,
+.q:hover .arrow{
+    border-left-color: var(--second-color);
+
+}
+.arrow{
+    display: inline-block;
+    margin: 0 0.5em;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 10px solid #555;
+    border-bottom: 6px solid transparent;
+    transition: 0.3s;
+}
+.questoes p{
+    color: #888;
+    line-height: 25px;
+}
+.a{
+    overflow: hidden;
+    height: 0;
+    padding: 0 1em 0 3.3em;
+}
+.a-opened{
+    padding: 1em 1em 2em 3.3em;
+    height: initial;
+}
+.arrow-rotated{
+    transform: rotate(90deg);
+}
+/*seção rodapé*/
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+}
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#gmail{
+    background: rgb(238, 125, 125);
+}
+
+#linkdin{
+    background-color: #4267b3;
+}
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .social-links, .contact-info, .important-links {
+      text-align: center;
+      justify-content: center;
+    }
+  }
+/*responsividade das seções*/
+@media(max-width: 1150px){
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+}
+@media(max-width: 1095px){
+    header{
+        padding: 11px 4%;
+    }
+   #menu-icon{
+    display: block;
+   }
+   header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #b9a9a9;
+    border-top: 2px solid var(--main-color);
+    transition: 0.2s;
+    text-align: left;
+   }
+   .navbar .active{
+    top: 100%;
+   }
+   .navbar a{
+    padding: 1.5rem;
+    display: block;
+    color: black;
+   }
+}
